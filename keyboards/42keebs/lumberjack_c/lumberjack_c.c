@@ -16,6 +16,7 @@
 
 #include "lumberjack_c.h"
 
+#ifndef ENCODERS_PAD_A
 bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     writePin(LED1, record->event.pressed);
 
@@ -28,3 +29,4 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
 
     return layer_state_set_user(state);
 }
+#endif

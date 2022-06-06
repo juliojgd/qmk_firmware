@@ -23,7 +23,7 @@
 #define PRODUCT_ID 0x0002
 #define DEVICE_VER 0x0001
 #define MANUFACTURER Peej
-#define PRODUCT Lumberjack
+#define PRODUCT Lumberjack-C
 
 /* key matrix size */
 #define MATRIX_ROWS 6

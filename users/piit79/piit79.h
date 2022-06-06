@@ -11,6 +11,7 @@
 enum piit79_layers {
     _BASE,
     _CZECH,
+    _GAME,
     _LOWER,
     _RAISE,
     _NAV,
@@ -50,6 +51,7 @@ enum piit79_keycodes {
     WAKE,
     VERSION,
     MAKE,
+    GAME,
     SAFE_RANGE_KEYMAP   // To be used as the starting custom keymap-specific keycode
 };
 
@@ -59,3 +61,11 @@ extern uint8_t last_muse_note;
 extern uint16_t muse_counter;
 extern uint8_t muse_offset;
 extern uint16_t muse_tempo;
+
+
+#ifdef LAYOUT_ortho_5x12
+    #define LAYOUT_piit79_5x12(...) LAYOUT_ortho_5x12(__VA_ARGS__)
+#endif
+
+
+#include "keymaps.h"

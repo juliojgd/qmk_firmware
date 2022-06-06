@@ -135,12 +135,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    if (clockwise) {
+        tap_code(KC_VOLU);
+    } else {
+        tap_code(KC_VOLD);
+    }
+    return true;
+}
+
+
+void layer_lighting(layer_state_t state) {
+#ifdef RGBLIGHT_ENABLE
+    if (layer_state_cmp(state, _GAME)) {
+        rgblight_enable();
+        rgblight_setrgb(255, 0, 0);
+    } else {
+        rgblight_disable();
+    }
+#endif
+}
+
+
 __attribute__ ((weak))
 layer_state_t layer_state_set_keymap (layer_state_t state) {
     return state;
 }
 
 layer_state_t layer_state_set_user (layer_state_t state) {
+    layer_lighting(state);
     return layer_state_set_keymap (state);
 }
 

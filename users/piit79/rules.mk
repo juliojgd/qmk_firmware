@@ -4,4 +4,4 @@ ifdef AUDIO_ENABLE
 	SRC += muse.c
 endif
 
-UNICODE_ENABLE = yes
+UNICODE_ENABLE = no
