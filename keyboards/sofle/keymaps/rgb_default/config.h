@@ -37,7 +37,7 @@
     #undef TAPPING_TERM
     #define TAPPING_TERM 200
 #endif
-#define ENCODER_DIRECTION_FLIP
+// #define ENCODER_DIRECTION_FLIP
 
 
 #define RGBLIGHT_SLEEP
@@ -68,9 +68,9 @@
 	//#define RGBLIGHT_EFFECT_ALTERNATING
 	//#define RGBLIGHT_EFFECT_TWINKLE
 
-    #define RGBLED_NUM 70
+    #define RGBLED_NUM 58
 	//#define RGBLED_SPLIT
-	#define RGBLED_SPLIT { 35, 35 } // haven't figured out how to use this yet
+	#define RGBLED_SPLIT { 29, 29 } // haven't figured out how to use this yet
 
 	//#define RGBLED_NUM 30
     #define RGBLIGHT_LIMIT_VAL 120
@@ -126,3 +126,7 @@
  // #   undef ENABLE_RGB_MATRIX_SOLID_SPLASH
  // #   undef ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #endif
+
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED D5 // Specify a optional status led by GPIO number which blinks when entering the bootloader
