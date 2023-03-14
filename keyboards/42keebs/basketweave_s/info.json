@@ -1,6 +1,14 @@
 {
     "keyboard_name": "Basketweave",
     "url": "https://github.com/piit79/basketweave-s",
+    "manufacturer": "42. Keebs"
+    "usb": {
+    "vid": "0x6B62",
+    "pid": "0x6869",
+    "device_ver": "0x0001",
+    "device_version": "1.5.4"
+    } 
+
     "maintainer": "piit79",
     "width": 20,
     "height": 5.25,

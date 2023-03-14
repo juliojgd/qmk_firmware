@@ -10,7 +10,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
+	 * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
@@ -18,19 +18,12 @@
 
 #include "config_common.h"
 
-#define VENDOR_ID       0x6B62
-#define PRODUCT_ID      0x6869
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    42. Keebs
-#define PRODUCT         Basketweave-S
-
 /* key matrix size */
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 16
 
 #define MATRIX_ROW_PINS { A6, C6, C7, A7, A5 }
 #define MATRIX_COL_PINS { A0, A1, A2, A3, A4, B0, B1, B2, D5, D6, C5, C4, C3, C2, C1, C0 }
-#define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
